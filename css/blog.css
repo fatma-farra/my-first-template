@@ -1,0 +1,443 @@
+/* Common */
+.social a{
+    display: block;
+    float: left;
+    background-color: var(--maincolor);
+    color: var(--secondaryColor);
+    margin: 5px;
+    border-radius: 2px;
+}
+.social a:hover{
+    opacity: 0.8;
+}
+.a-tag{
+    display: inline-block;
+    color: #000;
+    background-color: var(--bgColor);
+    margin-left: 3px;
+    line-height: 1.4;
+    padding: 7px;
+    text-align: center;
+    font-size: 14px;   
+}
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --maincolor: #6195FF;
+    --secondaryColor: #fff;
+    --bgColor: #f4f4f4;
+    --border: solid #eee ;
+}
+body{
+    font-family: 'Varela Round',sans-serif;
+    color: #868F9B;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.clear{
+    clear: both;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;  
+}
+li{
+    list-style: none;
+}
+.section-header{
+    margin: 30px 0;
+}
+.section-header .title{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: black;
+}
+.section-header .line{
+    display: block;
+    height: 4px;
+    width: 40px;
+    margin: 10px 0;
+    background-color: var(--maincolor);
+}
+hr{
+    margin: 5px 0;
+    background-color: #eee;
+    border: none;
+    height: 2px;
+}
+img{
+    width: 100%;
+}
+/* header */
+.header{
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.header .logo{
+    width: 25%;
+    float:left;
+    margin: 15px 5% 0;
+}
+.header .logo img{
+    width: 30%;
+}
+.header .nav{
+    width: 65%;
+    float:left;
+    list-style: none;
+}
+.nav > li{
+    display: inline-block;
+}
+.nav > li > a{
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--secondaryColor);
+    padding: 30px 15px 0;
+}
+
+.nav > li > a::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin-top: 3px;
+    background-color: var(--maincolor);
+    transition: width 0.5s;
+}
+.nav > li > a:hover::after {
+    width: 100%;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    position: absolute;
+    background-color: var(--maincolor);
+    list-style: none;
+    top: 80%;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+.dropdown-menu a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--secondaryColor);
+}
+.dropdown:hover ~ .dropdown-menu{
+    opacity: 1;
+    visibility:visible;
+}
+/* Breadcrumps */
+.breadcrumb{
+    background-color: var(--bgColor);
+    border: 2px var(--border);
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+.breadcrumb .title{
+    float: left;
+    font-size: 40px;
+    text-transform: capitalize;
+    width: 50%;
+    color: #000;
+    font-weight: 700;
+}
+.breadcrumb .bc-link{
+    float: left;
+    width: 50%;
+    padding-left: 25%;
+}
+.breadcrumb .bc-link li{
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin: 3px;
+}
+.breadcrumb .bc-link a{
+    color: var(--maincolor);
+}
+.breadcrumb .bc-link li + li::before{
+    content: "/";
+    padding-right: 10px;
+}
+/* Content Section*/
+/* Main Section */
+.main {
+    float: left;
+    width: 70%;
+    margin: 100px 0 0;
+}
+.main-img img{
+    width: 100%;
+}
+.main .img-caption , .main .sub-title , .main .desc{
+    margin: 20px 0;
+}
+.main .img-caption li{
+    display: inline-block;
+}
+.main .img-caption i{
+    color: var(--maincolor);
+}
+.main .img-caption .mrg{
+    margin: 0 20px;
+}
+.main .sub-title{
+    color: black;
+    font-size: 1.5rem;
+}
+.main .tags{
+    margin: 30px 0;
+}
+.main .tags span{
+    color: #000;
+    font-weight: bold;
+}
+.main .tags i{
+    color: var(--maincolor);
+    line-height: 1.4;
+    margin-right: 5px;
+}
+.main .bloger{
+    width: 100%;
+    border: 2px var(--border);
+    padding: 15px;
+}
+.main .bloger-img{
+    float: left;
+    width:160px
+}
+.main .bloger-img img{
+    width: 100%
+}
+.main .bloger .info{
+    float: left;
+    width:calc(75% - 40px);
+    margin-left: 40px;
+}
+.bloger .info .name{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+}
+.bloger .social{
+    text-align: center;
+    display: inline-block;
+    margin-left: 235px;
+}
+.bloger .social a{
+    width: 25px;
+    line-height: 25px;
+    margin: -4px 4px;
+}
+
+.bloger .info hr{
+    margin-top: 15px;
+    background-color: #eee;
+    border: none;
+    height: 2px;
+}
+.side{
+    float: left;
+    width: calc(30% - 40px);
+    margin: 100px 0 0 40px;
+}
+.side .search{
+    width: 100%;
+    position: relative;
+}
+.side #search{
+    background-color: var(--bgColor);
+    border: none;
+    border-bottom: 2px var(--border);
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+}
+.side .search i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--maincolor);
+}
+.side .cat-item{
+    position: relative;
+}
+.side .cat-item:hover span{
+    color: var(--maincolor);
+    opacity: 0.7;
+}
+.side .cat-item span{
+    display: inline-block;
+    padding: 3px 5px;
+}
+.side .cat-name{
+    color: black;
+    text-transform: capitalize;
+}
+.side .cat-count{
+    position: absolute;
+    right: 0;
+    color: var(--maincolor);
+}
+.side .pop-item{
+    margin: 10px 0;
+}
+.side .pop-item.mrg{
+    margin: 20px 0;
+}
+.side .pop-img{
+    float: left;
+    width: 110px;
+}
+.side .pop-item .post-info{
+    margin-left: 10px;
+    float: left;
+}
+.side .pop-item .post-title{
+    color: black;
+}
+.side .pop-item .date{
+    color: var(--maincolor);
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+.side .tags .tag-list a{
+    margin: 5px;
+}
+/* Comment */
+.comment{
+    border: 1px var(--border);
+    padding: 20px;
+    padding-bottom: 30px;
+}
+.comment .comment-img{
+    float: left;
+    width: 90px;
+    height: 90px;
+}
+.comment .comment-content{
+    margin-left: 115px;
+}
+.comment .comment-head{
+    position: relative;
+}
+.comment .comment-head h4{
+    text-transform: capitalize;
+    font-size: 20px;
+    display: inline-block;
+    color: #000;
+}
+.comment .comment-head span{
+    padding-left: 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.comment .comment-head a{
+    position: absolute;
+    right: 0;
+    color: var(--maincolor);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.comment .comment-head i{
+    margin-left: 3px;
+}
+.comment.active{
+    border: 1px solid var(--maincolor);
+    background-color: var(--bgColor);
+}
+.comment.active h4{
+    color: var(--maincolor);
+}
+/* Reply Form */
+.reply-form{
+    margin: 75px 0;
+}
+.reply-form input, textarea{
+    font-size: 16px;
+    display: block;
+    background-color: var(--bgColor);
+    border: none;
+    border-bottom: 2px var(--border);
+    color: #354052;
+    padding: 10px 10px;
+    margin: 5px 5px;
+}
+.input-parent{
+    margin-right: -14px;
+}
+.reply-form .half{
+    float: left;
+    width: calc(50% - 12px);
+}
+textarea{
+    resize: vertical;
+    width: 100%;
+}
+#send{
+    background-color: var(--maincolor);
+    color: var(--secondaryColor);
+    width: 140px;
+    border-radius: 3px;
+    height: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+#send:hover{
+    opacity: 0.8;
+}
+/* Footer section */
+.footer{
+    height: 300px;
+    background-color: #1C1D21;
+    position: relative;
+}
+.footer .container{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.footer .logo{
+    width: 150px;
+    margin-left: 45%;
+}
+.footer .social{
+    margin-top: 20px;
+    margin-left: 55%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.footer .social a{
+    width: 50px;
+    line-height: 50px;
+}
+.footer .copyright a{
+    color: var(--maincolor);
+    text-transform: uppercase;
+    transition: opacity 0.5s;  
+}
+.footer .copyright span{
+    text-transform: uppercase;  
+    color: var(--secondaryColor);
+}
